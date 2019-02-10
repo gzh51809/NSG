@@ -1,0 +1,144 @@
+@import './mixin.less';
+@import './reset.less';
+
+.goodslist{
+	.margin(43,0,0,0);
+	.w(375);
+	.h(40);
+	.fs(14);
+	.goods-search-list-nav{
+		border-bottom:1px solid #ccc;
+		.w(375);
+		.h(42);
+		background: #eee;
+
+		ul{
+			li{
+				float:left;
+				width:30%;
+				.h(42);
+				.lh(42);
+				text-align:center;
+
+				a{
+					i{
+						.w(20);
+					    font-size: 0;
+					    line-height: 0;
+					    vertical-align: middle;
+					    display: inline-block;
+					    width: 0;
+					    height: 0;
+					    margin-left: 0.2rem;
+					    border-width: 0.2rem;
+					    border-color: #AAA transparent transparent transparent;
+					    border-style: solid dashed dashed dashed;
+						border-color: #888 transparent transparent transparent;
+					}
+				}
+				.order{
+					display:none;
+					text-align: left;
+					position:absolute;
+					background: #fff;
+					.w(375);
+					.h(140);
+					p{
+						.w(365);
+						.h(45);
+						.fs(14);
+						.margin(0,0,0,10);
+						.padding(0,0,0,10);
+						color:#ccc;
+						border-bottom:1px solid #ccc;
+					}
+				}
+			}
+		}
+		.browse-mode{
+			border-left:1px solid #ccc;
+			position:absolute;
+			right:0;
+			width:15%;
+			.h(43);
+			float:right;
+			a{		
+				.h(43);
+				width: 100%;
+				display:inline-block;
+				color:#ccc;
+
+				span{
+					.h(43);
+					width: 100%;
+					display:inline-block;
+					background-image:url('../imgs/browse_list.png');
+					background-repeat:no-repeat;
+					background-size: 50%;
+					background-position: 50% 50%;
+				}
+			}
+		}
+
+	}
+	.goods{
+		.w(375);
+		height:100%;
+		display:inline-block;
+		ul{
+			li{
+
+				.w(375);
+				.h(116);
+				.padding(10,0,0,10);
+				.list_l{
+					float:left;
+					img{
+						.w(101);
+						.h(101);
+						display:inline-block;
+					}
+				}
+				.list_right{
+				border-bottom:1px solid #ccc;
+					float:left;
+					.w(238);
+					.h(100);
+					.padding(0,0,0,10);
+					.margin(0,0,0,10);
+					.list_title{
+						.fs(14);
+						.w(238);
+						.h(35);
+						.lh(35);
+						color:#000;
+						display:inline-block;
+						overflow:hidden;
+						white-space:nowrap;
+						text-overflow:ellipsis;
+					}
+					.list_price{
+						.w(238);
+						.h(28);
+						.lh(28);
+						.fs(22);
+						color:#EC5464;
+					}
+					.store_name{
+						.fs(12);
+						color:#999;
+						.lh(22);
+						.h(22);
+						.w(238);
+						.sale{
+							float:left;
+						}
+						.name{
+							float:right;
+						}
+					}
+				}
+			}
+		}
+	}
+}

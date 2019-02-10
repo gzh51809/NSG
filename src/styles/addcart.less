@@ -1,0 +1,176 @@
+@import './main.less';
+*{
+	padding: 0;
+	margin: 0;
+}
+.addcart{
+	height: 100%;
+    width: 100%;
+    div{
+    	border-top: 1px solid #ccc;
+    	span{
+    		display: inline-block;
+    		.padding(0,22,0,22.5);
+			.lh(44);
+			.fs(14);
+			background: #eee;
+			float: left;
+    	}
+    	button{
+    		border: 0 none;
+    		.padding(0,0,0,0);
+    		float: left;
+    		span{
+    			display: inline-block;
+    		.padding(0,22,0,22);
+			.lh(44);
+			.fs(14);background: #FB6E52;
+			float: left;
+			color: #fff;
+			.h(44);
+    		}
+    		
+    	}
+    	.buy{
+    		span{
+    			background: #ff5001;
+    		}	
+		}
+    	position: fixed;
+	    bottom: 0;
+	    .h(44);
+	    width: 100%;   
+		.service{
+			border-right: 1px solid #DDD;
+			.h(44);
+		}
+		
+    }
+}
+.ant-drawer-content-wrapper{
+	.ant-drawer-content{
+		.ant-drawer-body{
+			.h(500);
+		}
+		
+	}
+}
+.ant-drawer-body{
+	.padding(0,0,0,0);
+	z-index: -1;
+	.h(322);
+	.Goods{
+		z-index: 999;
+		.h(322);
+		.goods{
+			border-bottom: 1px solid #eee;
+			.goodscon{
+				// background: #ccc;
+				.h(90);
+				.padding(12,12,12,12);
+				width: 100%;
+				img{
+					.w(66);
+					.h(66);
+					float: left;
+				}
+				div{
+					// float: left;
+					p{
+						.padding(0,7,7,12);
+						span{
+							color: red;
+						}
+						.fRight{
+							color: #000;
+							float: right;
+						}
+					}
+				}
+			}
+		}
+		.goodsSelect{
+			.padding(7,9,7,9);
+			// height: 100%;
+			width: 100%;
+			div{
+				.h(63);
+				p{
+					.padding(3,3,3,3);
+					span{
+						.padding(3,3,3,3);
+						border: 1px solid #eee;
+					}
+				}
+			} 
+		}
+		.buynum{
+			.h(46);
+			width: 100%;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+			.fRight{
+				float: right;
+			}
+			p{
+				border-radius: 10%;
+				display: inline;
+				.lh(45);
+				.padding(0,10,0,10);
+				span{
+					display: inline-block;
+					.w(30);
+					.h(30);
+					.lh(30);
+					text-align: center;
+					border: 1px solid #ccc;
+					.margin(6,0,0,0);
+				}
+				
+			}
+		} 
+		.footer{
+			border: 0 none;
+		}
+		.bottom{
+			.h(44);
+			.lh(44);
+			position: fixed;
+			bottom: 0;
+		}
+	}	
+}
+.active{
+	background: #ff5001;
+}
+
+
+
+// 遮罩层样式
+.bottom{
+	z-index: 999;
+		.h(44);
+		border-top: 1px solid #DDD;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		background: #fff;
+		div{
+			.padding(0,22,0,22.5);
+			.lh(44);
+			.fs(14);
+			background: #eee;
+			float: left;
+		}
+		.service{
+			border-right: 1px solid #DDD;
+		}
+		.buy{
+			color: #fff;
+			background: #ff5001;
+		}
+		.addCar{
+			background: #FB6E52;
+			color: #fff;
+		}
+	}

@@ -1,0 +1,154 @@
+@import './mixin.less';
+// @import './reset.less';
+*{
+	margin:0;
+	padding:0;
+}
+.cart{
+	.w(375);
+	height:100%;
+	.header-wrap{
+		background: #ff5001;
+		.w(375);
+		.h(42);
+		.lh(42);
+		.fs(18);
+		display:flex;
+		justify-content: space-between;
+		.header-l{
+			.w(43);
+			.h(42);
+			text-align:center;
+		}
+		.header-title{
+			h1{
+				color:#fff;
+			}
+		}
+		.header-r{
+			.w(43);
+			.h(42);
+			text-align:center;
+
+		}
+	}
+	.cart_goods{
+		.w(375);
+		height:100%;
+		.store{
+			.w(375);
+			.h(42);
+			.lh(42);
+			.padding(0,0,0,10);
+			background:#eee;
+			border-bottom:1px solid #eee;
+			input{
+				.w(17);
+				.h(17);
+				.padding(0,0,0,10);
+			}
+			i{
+				.w(17);
+				.h(17);
+				
+				display:inline-block;
+				.padding(0,0,0,10);
+				vertical-align: top;
+				
+			}
+			h3{
+				.fs(14);
+				color:#333;
+				display:inline-block;
+				.w(260);
+				.h(42);
+				.padding(0,0,0,15);
+			}
+		}
+		.cart_list{
+			.margin(0,0,0,10);
+			.w(361);
+			.h(92);
+			border-bottom:1px solid #ccc;
+			ul{
+				.h(92);
+				li{
+					.h(92);
+					margin-top:10px;
+					.check{
+						.w(17);
+						.h(17);
+						float:left;
+						.lh(92);
+						margin-top: 23px;
+    					margin-right: 10px;
+						
+					}
+					.cart_img{
+						border:1px solid #ccc;
+						float:left;
+						.w(70);
+						.h(70);
+						.lh(70);
+						display:inline-block;
+						text-align: center;
+						img{
+							.w(59);
+							.h(59);
+							display:inline-block;
+
+						}
+					}
+					.good_list{
+						float:left;
+						margin-left:10px;
+						.w(251);
+						.cart_title{
+							.name{
+								p{
+									.w(218);
+									.h(48);
+									.lh(15);
+									.fs(12);
+									color:#333;
+									display:inline-block;
+								}
+								span{
+									float:right;
+								}
+							}
+						}
+						.price_qty{
+							.w(251);
+							.price{
+								float:left;
+								color:#DB4453;
+								vertical-align: middle;
+							}
+							.qty{
+								float:right;
+								input{
+									border:1px solid #ccc;
+									text-align:center;
+									.w(30);
+									.h(26);
+									
+								}
+								.add{
+									border-top-right-radius:5px;
+									border-bottom-right-radius:5px;
+								}
+								.sub{
+									border-top-left-radius:5px;
+									border-bottom-left-radius:5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		
+	}
+}

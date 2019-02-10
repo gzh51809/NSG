@@ -1,0 +1,62 @@
+@import './main.less';
+*{
+	padding: 0;
+	margin: 0;
+}
+.Homecontent{ 
+	background: #fafafa;;
+	width: 100%; 
+	height: 100%;
+	.bannerBox{
+		width: 100%;
+		.padding(43,0,0,0);
+		.banner{
+			width: 100%;
+			.h(130);
+			background: #ccc;
+			img{
+				width: 100%;
+				.h(130);
+			}
+		}
+	}
+	.goods{
+		.padding(20,0,0,8);
+		.title{
+			.fs(14);
+
+			color: red;
+			.padding(0,0,15,0);
+		}
+		ul{
+			.fs(12);
+			width: 100%;
+			height: 100%;
+			li{
+				list-style: none;
+				float: left;
+				width: 46%;
+				.margin(0,13,8,0);
+				background: #fff;
+				.h(234);
+				a{
+					img{
+					.w(176);
+					.h(176);
+					}
+					p{
+						.h(26);
+						.lh(26);
+						width: 100%;
+						overflow: hidden;
+					}
+					.price{
+						font-weight: bold;
+						color: red;
+					}
+				}
+				
+			}
+		}
+	}
+} 

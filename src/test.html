@@ -1,0 +1,293 @@
+<!-- <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <style type="text/css">
+  
+    </style>
+  </head>
+  <body>
+      <canvas width="600" height="600" id="canvas"></canvas>
+  </body>
+  <script type="text/javascript">
+      var canvas = document.getElementById('canvas');
+var cxt = canvas.getContext('2d');
+
+var timer;
+var gravity = 1;
+var buffer = 5;
+
+var iStop = false;
+
+var boxes = [
+{'startSpeed':-20,'currentSpeed':-20,'boxTop':500,'boxLeft':0},
+{'startSpeed':-10,'currentSpeed':-10,'boxTop':500,'boxLeft':100},
+{'startSpeed':-30,'currentSpeed':-30,'boxTop':500,'boxLeft':200},
+{'startSpeed':-10,'currentSpeed':-10,'boxTop':500,'boxLeft':300},
+{'startSpeed':-20,'currentSpeed':-20,'boxTop':500,'boxLeft':400}
+];
+
+function draw(){
+for(var i=0; i<boxes.length; i++){
+boxes[i].currentSpeed += gravity;
+boxes[i].boxTop += boxes[i].currentSpeed;
+if(boxes[i].boxTop > 500){
+boxes[i].boxTop -= boxes[i].currentSpeed;
+}
+
+cxt.fillRect(boxes[i].boxLeft, boxes[i].boxTop, 100, 100);
+if(boxes[i].boxTop >= 500){
+boxes[i].startSpeed += buffer;
+boxes[i].currentSpeed = boxes[i].startSpeed;
+}
+}
+}
+
+function erase(){
+cxt.clearRect(0, 0, 600, 600);
+}
+
+window.requestAnimationFrame =
+window.requestAnimationFrame ||
+window.mozRequestAnimationFrame ||
+window.webkitRequestAnimationFrame ||
+window.msRequestAnimationFrame;
+
+window.cancelRequestAnimationFrame =
+window.cancelRequestAnimationFrame ||
+window.mozCancelRequestAnimationFrame ||
+window.webkitCancelRequestAnimationFrame ||
+window.msCancelRequestAnimationFrame;
+
+function animate() {
+erase();
+draw();
+
+if(iStop){
+cancelRequestAnimationFrame(timer);
+}else{
+timer = requestAnimationFrame(animate);
+}
+}
+
+animate();
+  </script>
+  </html>  
+
+
+
+ -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hangge.com</title>
+<style>
+canvas {
+cursor: pointer;
+border: 1px solid black;
+}
+</style>
+<script>
+// 用于表示球的所有细节的Ball函数
+function Ball(x, y, dx, dy, radius) {
+this.x = x;
+this.y = y;
+this.dx = dx;
+this.dy = dy;
+this.radius = radius;
+this.strokeColor = "black";
+this.fillColor = "red";
+}
+
+// 这个数组用于保存画布上出现的所有球
+var balls = [];
+
+var canvas;
+var context;
+
+window.onload = function() {
+canvas = document.getElementById("canvas");
+context = canvas.getContext("2d");
+canvas.onmousedown = canvasClick;
+// 每0.02秒绘制一次画布
+setTimeout(drawFrame, 20);
+};
+
+function addBall() {
+// 小球半径
+var radius = 20;
+// 创建新的ball对象
+var ball = new Ball(50,50,1,1,radius);
+// 将其保存在balls数组中
+balls.push(ball);
+}
+
+function clearBalls() {
+// 删除所有球对象
+balls = [];
+}
+
+function drawFrame() {
+// 清除画布
+context.clearRect(0, 0, canvas.width, canvas.height);
+
+context.beginPath();
+
+// 循环所有的球
+for(var i=0; i<balls.length; i++) {
+// 把每个球移动到新的位置
+var ball = balls[i];
+ball.x += ball.dx;
+ball.y += ball.dy;
+
+// 添加重力作用的效果，让球加速下落
+if ((ball.y) < canvas.height) ball.dy += 0.22;
+// 添加摩擦力作用的效果，减慢左右移动速度
+ball.dx = ball.dx * 0.998;
+// 如果球碰到某一边，就反弹回来
+if ((ball.x + ball.radius > canvas.width) || (ball.x - ball.radius < 0)) {
+ball.dx = -ball.dx;
+}
+// 如果球碰到底部，反弹回来，但慢慢地减速
+if ((ball.y + ball.radius > canvas.height) || (ball.y - ball.radius < 0)) {
+ball.dy = -ball.dy*0.96;
+}
+
+context.beginPath();
+context.fillStyle = ball.fillColor; 
+
+// 绘制球
+context.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
+context.lineWidth = 1;
+context.fill();
+context.stroke();
+}
+
+// 20毫秒后绘制下一帧
+setTimeout(drawFrame, 20);
+}
+
+function canvasClick(e) {
+// 获取点击的坐标
+var clickX = e.pageX - canvas.offsetLeft;
+var clickY = e.pageY - canvas.offsetTop;
+
+// 找到点中的小球
+for(var i in balls)
+{
+var ball = balls[i];
+if ((clickX > (ball.x-ball.radius)) && (clickX < (ball.x+ball.radius)))
+{
+if ((clickY > (ball.y-ball.radius)) && (clickY < (ball.y+ball.radius)))
+{
+// 改变点击的小球速度
+ball.dx -= 2;
+ball.dy -= 3;
+return;
+}
+}
+}
+}
+</script>
+</head>
+<body>
+<canvas id="canvas" width="400" height="300">
+</canvas>
+<div>
+<button onclick="addBall()">添加小球</button>
+<button onclick="clearBalls()">清空画布</button>
+</div>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+ <head></head>
+ <body>
+  <div className="nctouch-main-layout"> 
+   <div id="cart-list-wp"> 
+    <div className="nctouch-cart-container"> 
+     <dl className="nctouch-cart-store"> 
+      <dt>
+       <span className="store-check"> <input className="store_checkbox" type="checkbox" checked="" /> </span> 
+       <i className="icon-store"></i> 潮男搭配师 
+      </dt> 
+     </dl> 
+     <ul className="nctouch-cart-item"> 
+      <li cart_id="226254" className="cart-litemw-cnt"> 
+       <div className="goods-check"> 
+        <input type="checkbox" checked="" name="cart_id" value="226254" /> 
+       </div> 
+       <div className="goods-pic"> 
+        <a href="https://www.nanshig.com/wap/tmpl/product_detail.html?goods_id=226254"> <img src="https://www.nanshig.com/data/upload/shop/store/goods/45/45_05906246257217290_360.jpg" /> </a> 
+       </div> 
+       <dl className="goods-info"> 
+        <dt className="goods-name"> 
+         <a href="https://www.nanshig.com/wap/tmpl/product_detail.html?goods_id=226254"> 2018新款加厚加绒棉袄冬季男士外套个性棉衣修身韩版棉服潮流帅气 黑色 L </a>
+        </dt> 
+
+       </dl> 
+       <div className="goods-del" cart_id="226254">
+        <a href="javascript:void(0);"></a>
+       </div> 
+       <div className="goods-subtotal"> 
+        <span className="goods-price">￥<em>128.00</em></span> 
+        <span className="goods-sale"> </span> 
+        <div className="value-box"> 
+         <span className="minus"> <a href="javascript:void(0);">&nbsp;</a> </span> 
+         <span> <input type="text" pattern="[0-9]*" readonly="" className="buy-num buynum" value="3" /> </span> 
+         <span className="add"> <a href="javascript:void(0);">&nbsp;</a> </span> 
+        </div> 
+       </div> </li> 
+     </ul> 
+    </div> 
+    <div className="nctouch-cart-bottom no-login"> 
+     <div className="cart-nologin-tip">
+      结算购物车中的商品，需先登录商城
+     </div> 
+     <div className="cart-nologin-btn">
+      <a href="../tmpl/member/login.html" className="btn">登录</a> 
+      <a href="../tmpl/member/register.html" className="btn">注册</a> 
+     </div> 
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>
