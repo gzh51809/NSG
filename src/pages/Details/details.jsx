@@ -26,7 +26,6 @@ class Content extends React.Component{
 			title: [{path:'/details/',text: '商品'},{path:'/detailsImg/',text: '详情'},{path:'/evaluate/:id',text: '评价'}],
 			// title: [{path:'/details/:id',text: '商品'},{path:'/home',text: '详情'},{path:'/cart',text: '评价'}],
 			active: 0
-
 		}
 	}
 	// 获取数据
@@ -72,9 +71,7 @@ class Content extends React.Component{
 				goodsCon: goodsColor,
 				id: currentId
 			})
-			// console.log(currentId);
-			// console.log(22222,this.state.bool);
-			// console.log(111,this.state.goods);
+			
 		})
 		.catch((err)=>{
 			console.log(err);
@@ -94,13 +91,7 @@ class Content extends React.Component{
 				show: a
 			})
 		}
-		// this.setState({
-		// 	show: a
-		// })
-		// this.setState({
-		// 	show : true 
-		// })
-		// console.log(1111);
+		
 	}
 	componentWillMount(){
 		this.getData(); 
@@ -113,31 +104,8 @@ class Content extends React.Component{
 	 }	
 
 
-
-
-
-	//  	componentDidMount = (id) => {
-	// axios.get(`https://www.nanshig.com/mobile/index.php?act=goods&op=goods_body&goods_id=${id}`)
-	// .then(res => {
-	// 	var a = res.data;
-	//     this.setState({
-	    	
-	//         goodsData : a,
-	//     });
-	// })
-	// .catch(error => {
-	// 	console.log(error);
-	//  });
-	// }
-	// componentWillUnmount = () => {
-	// 	this.setState = (state,callback)=>{
-	// 	  return;
-	// 	};
-	// }
-
-
-
 	render(){
+		console.log(this.props.match.params.id);
 		return (
 			<div>
         		 <div>
@@ -146,7 +114,7 @@ class Content extends React.Component{
 						<div>
 						<Link to="/home">
 							<i className="iconfont icon-jiantouarrowhead7"></i>
-							</Link>
+						</Link>
 						</div>
 						<div className="selectGoods">
 							{/*<span>商品</span>
@@ -156,7 +124,8 @@ class Content extends React.Component{
 								(()=>{
 									return this.state.title.map((item,index)=>{
 										return <Link to={`${item.path}${this.state.id}`}
-										 className={this.state.active===index?'active':''} key={index}><span>{item.text}</span></Link>
+										 className={this.state.active===index?'active':''}
+										  key={index}><span>{item.text}</span></Link>
 									})
 								})()
 							}
@@ -224,7 +193,7 @@ class Content extends React.Component{
 							<i className="iconfont icon-icon-test"></i>
 						</div>
 					</div>
-					｛this.state.goods?<Addcar data={this.state.goods}/>: null｝
+					｛this.state.goods?<Addcar data={this.state.goods} id={this.props.match.params.id}/>: null｝
 				</div>
 			</div>
 		)

@@ -26,8 +26,7 @@ class Evaluate extends Component{
 			active: index,
 			id: id
 		})
-		// console.log(this.state.active);
-		// this.getData(id,index);
+		
 	}
 	// getData(id,index){
 	// 	//https://www.nanshig.com/mobile/index.php?act=goods&op=goods_body&goods_id=226880

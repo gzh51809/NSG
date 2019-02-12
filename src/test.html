@@ -206,88 +206,159 @@ return;
 
 
 
+<!-- 
+
+
+import { Drawer, Button, Radio } from 'antd';
+
+const RadioGroup = Radio.Group;
+
+class App extends React.Component {
+  state = { visible: false, placement: 'left' };
+
+  showDrawer = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+
+  onChange = (e) => {
+    this.setState({
+      placement: e.target.value,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <RadioGroup
+          style={{ marginRight: 8 }}
+          defaultValue={this.state.placement}
+          onChange={this.onChange}
+        >
+          <Radio value="top">top</Radio>
+          <Radio value="right">right</Radio>
+          <Radio value="bottom">bottom</Radio>
+          <Radio value="left">left</Radio>
+        </RadioGroup>
+        <Button type="primary" onClick={this.showDrawer}>
+          Open
+        </Button>
+        <Drawer
+          title="Basic Drawer"
+          placement={this.state.placement}
+          closable={false}
+          onClose={this.onClose}
+          visible={this.state.visible}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Drawer>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, mountNode);
+
+ -->
 
 
 
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+  .content {
 
+width:2000px;
 
+margin:0 auto;
+height:200px;
+display: flex;
 
+}
+.left {
 
+    flex: 0 1 300px;
 
+    width:300px;
 
+    background-color: blue;
 
+}
+.right {
 
+    flex: 0 1 300px;
 
+    .width:300px;
 
+    background-color: green;
 
+}
+</style>
+<body>
 
+    <div class="content">
 
+      <div class="left">
 
+      我是左边内容
 
+      ...
 
+      </div>
 
+      <div class="center">
 
+      我是中间内容
 
+      ...
 
+      </div>
 
+      <div class="right">
 
+      我是右边内容
 
+      ...
 
+      </div>
 
+</div>
 
-
-
-
-<html>
- <head></head>
- <body>
-  <div className="nctouch-main-layout"> 
-   <div id="cart-list-wp"> 
-    <div className="nctouch-cart-container"> 
-     <dl className="nctouch-cart-store"> 
-      <dt>
-       <span className="store-check"> <input className="store_checkbox" type="checkbox" checked="" /> </span> 
-       <i className="icon-store"></i> 潮男搭配师 
-      </dt> 
-     </dl> 
-     <ul className="nctouch-cart-item"> 
-      <li cart_id="226254" className="cart-litemw-cnt"> 
-       <div className="goods-check"> 
-        <input type="checkbox" checked="" name="cart_id" value="226254" /> 
-       </div> 
-       <div className="goods-pic"> 
-        <a href="https://www.nanshig.com/wap/tmpl/product_detail.html?goods_id=226254"> <img src="https://www.nanshig.com/data/upload/shop/store/goods/45/45_05906246257217290_360.jpg" /> </a> 
-       </div> 
-       <dl className="goods-info"> 
-        <dt className="goods-name"> 
-         <a href="https://www.nanshig.com/wap/tmpl/product_detail.html?goods_id=226254"> 2018新款加厚加绒棉袄冬季男士外套个性棉衣修身韩版棉服潮流帅气 黑色 L </a>
-        </dt> 
-
-       </dl> 
-       <div className="goods-del" cart_id="226254">
-        <a href="javascript:void(0);"></a>
-       </div> 
-       <div className="goods-subtotal"> 
-        <span className="goods-price">￥<em>128.00</em></span> 
-        <span className="goods-sale"> </span> 
-        <div className="value-box"> 
-         <span className="minus"> <a href="javascript:void(0);">&nbsp;</a> </span> 
-         <span> <input type="text" pattern="[0-9]*" readonly="" className="buy-num buynum" value="3" /> </span> 
-         <span className="add"> <a href="javascript:void(0);">&nbsp;</a> </span> 
-        </div> 
-       </div> </li> 
-     </ul> 
-    </div> 
-    <div className="nctouch-cart-bottom no-login"> 
-     <div className="cart-nologin-tip">
-      结算购物车中的商品，需先登录商城
-     </div> 
-     <div className="cart-nologin-btn">
-      <a href="../tmpl/member/login.html" className="btn">登录</a> 
-      <a href="../tmpl/member/register.html" className="btn">注册</a> 
-     </div> 
-    </div> 
-   </div> 
-  </div>
- </body>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

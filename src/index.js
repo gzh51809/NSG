@@ -14,14 +14,18 @@ import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
 React.axios = axios;
 //使用
+// http请求拦截器
 axios.interceptors.request.use((config) => {
   Toast.loading('', 3,true);
+  //  在发送请求之前做一些事情
     return config;
 }, (err) => {
     return Promise.reject(err)
 })
+// http响应拦截器
 axios.interceptors.response.use((response) => {
     Toast.hide(); //关闭loading
+    //  用响应数据做一些事情
     return response;
 }, (err) => {
     return Promise.reject(err);

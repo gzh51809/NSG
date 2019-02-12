@@ -59,6 +59,7 @@ class Detailsimg extends Component{
 
 
 	componentDidMount = (id) => {
+		console.log(555)
 	axios.get(`https://www.nanshig.com/mobile/index.php?act=goods&op=goods_body&goods_id=${id}`)
 	.then(res => {
 		var a = res.data;
@@ -100,8 +101,6 @@ class Detailsimg extends Component{
 									return this.state.title.map((item,idx)=>{
 										return <Link to={`${item.path}${this.state.id}`}
 										 className={this.state.active===idx?'active':''} key={idx}><span>{item.text}</span></Link>
-										
-										
 									})
 								})()
 							}

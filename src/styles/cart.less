@@ -148,7 +148,51 @@
 				}
 			}
 		}
-		
-		
+	}
+	.Settlement{
+		position:fixed;
+		bottom:55px;
+		right:0;
+		left:0;
+		.w(375);
+		.h(45);
+		.padding(0,0,0,10);
+		background:#eee;
+		.allcheck{
+			.w(40);
+			.h(45);
+			.lh(45);
+			display:inline-block;
+			.all{
+				.w(17);
+				.h(17);
+				display:inline-block;
+			}
+		}
+		.total_prite{
+			float:right;
+			.w(300);
+			.h(45);
+			.lh(45);
+			display:inline-block;
+			display:flex;
+			justify-content: space-between;
+			text-align:center;
+			.price_l{
+				width:70%;
+				span{
+					color:#f00;
+				}
+			}
+			.price_r{
+				width:40%;
+				background:#ff5001;
+				border-radius:20px;
+				color:#fff;
+				span{
+					color:#f00;
+				}
+			}
+		}
 	}
 }
